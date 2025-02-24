@@ -10,6 +10,7 @@ import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
+import postman from './postman.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -46,6 +47,7 @@ export const assets = {
     project_icon_dark,
     vscode,
     firebase,
+    postman,
     figma,
     git,
     mongodb,
@@ -78,25 +80,28 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Full stack project',
+        description: 'E-commerce App',
         bgImage: '/work-1.png',
+        url:'https://zearch.live/'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Subscription based app',
+        description: 'Web app',
         bgImage: '/work-2.png',
+        url:'https://zlight.in/mybusiness'
     },
-    {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
+    
+    // {
+    //     title: 'Photography site',
+    //     description: 'Web Design',
+    //     bgImage: '/work-3.png',
+    // },
+    // {
+    //     title: 'UI/UX designing',
+    //     description: 'UI/UX Design',
+    //     bgImage: '/work-4.png',
+    // },
 ]
 
 export const serviceData = [
@@ -113,5 +118,7 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode,  assets.mongodb,  assets.git,assets.postman,
+
+    // assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
 ];

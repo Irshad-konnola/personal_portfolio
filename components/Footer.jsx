@@ -17,18 +17,18 @@ const Footer = ({isDarkMode}) => {
         <p>© 2025 Irshad Konnola. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a target="_blank" href="">
+            <a target="_blank" href="https://www.linkedin.com/in/irshad-konnola-954516226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
               LinkedIn
             </a>
           </li>
           <li>
-            <a target="_blank" href="">
+            <a target="_blank" href="https://github.com/Irshad-konnola">
               GitHub
             </a>
           </li>
 
           <li>
-            <a target="_blank" href="">
+            <a target="_blank" href="https://www.instagram.com/irshad.konnola/">
               Instagram
             </a>
           </li>
