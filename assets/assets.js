@@ -36,6 +36,14 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import { 
+  Globe, 
+  Smartphone, 
+  Monitor, 
+  Database, 
+  Cloud, 
+  Gauge 
+} from 'lucide-react';
 
 export const assets = {
     user_image,
@@ -78,43 +86,138 @@ export const assets = {
     right_arrow_bold_dark
 };
 
-export const workData = [
+export const workData = {
+  enterprise: [
     {
-        title: 'Full stack project',
-        description: 'E-commerce App',
-        bgImage: '/work-1.png',
-        url:'https://zearch.live/'
+      title: 'Multi-tenant ERP SaaS',
+      description: 'Architected a comprehensive ERP system with POS, Accounts, and Sales modules for diverse clients with custom workflows',
+      bgImage: '/erp-saas.png', // Replace with actual image
+      confidential: true,
+      technologies: ['React', 'Vite' , 'Python', 'Multi-tenant'],
+      role: 'Frontend Developer'
     },
     {
-        title: 'Subscription based app',
-        description: 'Web app',
-        bgImage: '/work-2.png',
-        url:'https://zlight.in/mybusiness'
+      title: 'Restaurant POS System',
+      description: 'Engineered desktop POS application with React Native mobile companion and Python backend for seamless data sync',
+      bgImage: '/pos-system.png', 
+      confidential: true,
+      technologies: ['Electron.js', 'React Native', 'Python', 'Real-time Sync'],
+      role: 'Full-Stack Developer'
     },
-    
-    // {
-    //     title: 'Photography site',
-    //     description: 'Web Design',
-    //     bgImage: '/work-3.png',
-    // },
-    // {
-    //     title: 'UI/UX designing',
-    //     description: 'UI/UX Design',
-    //     bgImage: '/work-4.png',
-    // },
-]
+    {
+      title: 'Tourism Ecosystem Suite',
+      description: 'Built complete tourism platform with admin dashboard and three mobile apps for users, drivers, and supervisors',
+      bgImage: '/tourism-suite.png', 
+      confidential: true,
+      technologies: ['React', 'React Native', 'Payment Integration', 'Dashboard'],
+      role: 'Full-Stack Developer'
+    },
+    {
+      title: 'Car Detailing CRM',
+      description: 'Developed CRM system for car detailing businesses with automated job cards and cost estimation',
+      bgImage: '/car-crm.png', // Replace with actual image
+      screenshots: 2,
+      confidential: true,
+      technologies: [ 'React', 'Automation', 'CRM'],
+      role: 'Frontend Developer'
+    },
+    {
+      title: 'Zearch Booking Platform',
+      description: 'Led frontend development for customizable auditorium/parking booking engine with real-time management',
+      bgImage: '/zearch-booking.png', // Replace with actual image
+      confidential: false,
+      technologies: ['Next.js', 'Real-time', 'Booking System', 'Python APIs'],
+      role: 'Frontend Lead',
+      url: 'https://zearch.live/'
+    }
+  ],
+  mobile: [
+    {
+      title: 'Tourism User App',
+      description: 'React Native mobile app for tourists with booking, payment, and itinerary management',
+      bgImage: '/mobile-tourism-user.png', // Replace with actual image
+      technologies: ['React Native', 'Expo', 'iOS', 'Android'],
+      url: '#'
+    },
+    {
+      title: 'Driver Management App',
+      description: 'Mobile application for tourism drivers with route optimization and trip management',
+      bgImage: '/mobile-driver-app.png', // Replace with actual image
+      technologies: ['React Native', 'Maps', 'Navigation', 'Real-time'],
+      url: '#'
+    },
+    {
+      title: 'Supervisor Dashboard App',
+      description: 'Management application for supervisors to monitor operations and manage resources',
+      bgImage: '/mobile-supervisor-app.png', // Replace with actual image
+      technologies: ['React Native', 'Dashboard', 'Analytics', 'Management'],
+      url: '#'
+    }
+  ],
+  personal: [
+    {
+      title: 'Blood Donor Management System',
+      description: 'Full-stack platform connecting donors with patients featuring real-time availability and secure authentication',
+      bgImage: '/blood-donor.png', // Replace with actual image
+      technologies: ['React', 'Node.js', 'PlSql', 'Real-time'],
+      url: 'https://blood-donor-system-nu.vercel.app/',
+      github: true
+    },
+    {
+      title: 'Work Permit System',
+      description: 'Digital permit processing application streamlining document verification and replacing manual workflows',
+      bgImage: '/work-permit.png', // Replace with actual image
+      technologies: ['React', 'Digital Workflow'],
+      url: 'https://wps-theta.vercel.app/',
+      github: true
+    }
+  ]
+};
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
+  { 
+    icon: Globe, 
+    title: 'Full-Stack Web Development', 
+    description: 'Building responsive and scalable web applications using React, Next.js, Node.js, and modern web technologies. From frontend interfaces to backend APIs and database design.', 
+    link: '#contact' 
+  },
+  { 
+    icon: Smartphone, 
+    title: 'Mobile App Development', 
+    description: 'Developing cross-platform mobile applications for iOS and Android using React Native and Expo. Creating native-like experiences with optimized performance.', 
+    link: '#contact' 
+  },
+  { 
+    icon: Monitor, 
+    title: 'Desktop Applications', 
+    description: 'Building cross-platform desktop applications using Electron.js with React. Creating powerful desktop solutions with native capabilities.', 
+    link: '#contact' 
+  },
+  { 
+    icon: Database, 
+    title: 'CMS & API Development', 
+    description: 'Developing custom CMS solutions with Strapi, RESTful APIs with Express.js, and integrating third-party services for seamless data flow.', 
+    link: '#contact' 
+  },
+  { 
+    icon: Cloud, 
+    title: 'SaaS & ERP Solutions', 
+    description: 'Architecting multi-tenant SaaS platforms and ERP systems with custom workflows, automated processes, and scalable infrastructure.', 
+    link: '#contact' 
+  },
+  { 
+    icon: Gauge, 
+    title: 'Performance Optimization', 
+    description: 'Optimizing application performance through code splitting, state management, caching strategies, and SEO enhancements for better user experience.', 
+    link: '#contact' 
+  },
+];
+
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Bsc Computer science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 3 projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 10 projects' }
 ];
 
 export const toolsData = [
