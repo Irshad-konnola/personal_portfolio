@@ -8,39 +8,44 @@ import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-schema:dark)").matches)
-    ) {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "";
-    }
-  }, [isDarkMode]);
-
   return (
     <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-      <Header isDarkMode={isDarkMode}/>
-      <About isDarkMode={isDarkMode}/>
-      <Services isDarkMode={isDarkMode}/>
-      <Work isDarkMode={isDarkMode}/>
-      <Contact isDarkMode={isDarkMode}/>
-      <Footer isDarkMode={isDarkMode}/>
+      {/* --- SEO STRUCTURED DATA (JSON-LD) --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Irshad Konnola",
+            "jobTitle": "MERN Stack & Mobile Engineer",
+            "url": "https://irshadkonnola.vercel.app",
+            "image": "https://irshadkonnola.vercel.app/og-image.png",
+            "sameAs": [
+              "https://linkedin.com/in/irshad-konnola-954516226",
+              "https://github.com/Irshad-konnola",
+              "https://www.instagram.com/irshad.konnola/"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Malappuram",
+              "addressRegion": "Kerala",
+              "addressCountry": "IN"
+            },
+            "description": "Expert Fullstack Developer and MERN Stack Engineer with 3+ years of experience specializing in Next.js, React Native, and Enterprise SaaS solutions."
+          }),
+        }}
+      />
+
+      <Navbar />
+      <Header />
+      <About />
+      <Services />
+      <Work />
+      <Contact />
+      <Footer />
     </>
   );
 }
